@@ -1,0 +1,90 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="Downloader"
+config/description="Downloader for various programs/software"
+run/main_scene="res://main.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Downloader"
+run/low_processor_mode=true
+config/icon="res://Download-Window-icon.png"
+config/macos_native_icon="res://Iconsmind-Outline-Download-Window.icns"
+config/windows_native_icon="res://Iconsmind-Outline-Download-Window.ico"
+
+[compression]
+
+formats/zstd/long_distance_matching=true
+formats/zstd/compression_level=22
+formats/zstd/window_log_size=10
+formats/zlib/compression_level=9
+formats/gzip/compression_level=9
+
+[debug]
+
+gdscript/completion/autocomplete_setters_and_getters=true
+
+[display]
+
+window/size/width=800
+window/size/height=250
+window/size/resizable=false
+window/size/borderless=true
+window/size/test_width=800
+window/size/test_height=250
+window/dpi/allow_hidpi=true
+window/vsync/vsync_via_compositor=true
+
+[editor]
+
+convert_text_resources_to_binary_on_export=true
+
+[gui]
+
+theme/use_hidpi=true
+
+[input]
+
+Close={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[logging]
+
+file_logging/max_log_files=0
+
+[physics]
+
+3d/physics_engine="Bullet"
+
+[rendering]
+
+quality/driver/fallback_to_gles2=true
+quality/2d/gles2_use_nvidia_rect_flicker_workaround=true
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=1
+quality/2d/use_pixel_snap=true
+threads/thread_model=2
+vram_compression/import_bptc=true
+vram_compression/import_etc=true
+vram_compression/import_pvrtc=true
+quality/shadows/filter_mode=2
+quality/filters/use_nearest_mipmap_filter=true
+quality/subsurface_scattering/quality=2
+quality/subsurface_scattering/follow_surface=true
+quality/voxel_cone_tracing/high_quality=true
